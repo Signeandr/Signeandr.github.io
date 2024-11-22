@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bursdag :D</title>
+</head>
+<body class="startmodus">
+    
+    <div class="innhold">
+
+        <h1>Gratulerer med dagen :D</h1>
+        <iframe width="380" height="315"
+        src="https://www.youtube.com/embed/k37QvhAyA2Y?autoplay=1&mute=1"
+        allow="encrypted-media"></iframe>
+        
+      
+
+        <button id="party">Party?</button>
+        <button id="dnd">Dårlige D&D puns?</button>
+
+
+            <a href="side2.html">klikk pls</a>
+
+        <h2></h2>
+    </div>
+
+    <script>
+        let fest = document.querySelector("#party");
+        let jokeknapp = document.querySelector("#dnd");
+        let innhold = document.querySelector("body");
+        let tekst = document.querySelector("h2")
+
+        fest.addEventListener("click", yay)
+
+        jokeknapp.addEventListener("click", dndjokes)
+
+        const vitser = [
+        "Why did the wizard cross the road? To cast Feather Fall!",
+        "Why can’t the undead write music? They can only de-compose.",
+        "What do you call a mountaintop guarded by rogues? A Sneak Peak.",
+        "A sneak attack is a Jab Well Done",
+        "A monk walks over to a street food vendor and says, “make me one with everything” and hands the vendor a gold piece. The monk gets her food and says, “where’s my change”? The vendor says, “change comes from within.”",
+        "What do you call a group of bards all wearing plate armor? Heavy metal band.",
+        "Why was the barbarian attempting to learn lightning magic? Because he was told he needed an outlet for his anger.",
+        "Two half-orcs walk into a bar. The halfling walks under it.",
+        "Always feed your players before a session, it gives them inspi-ration!",
+        "Why was the bard so good at learning monk skills? It was a simple ki change"
+
+        ]
+
+        function yay(){
+            
+            if (innhold.className == "startmodus"){
+                 innhold.className = "partymodus1"
+                 endretekstfarge("white", "red");
+            } 
+            else if (innhold.className == "partymodus1"){
+                innhold.className = "partymodus2"
+                endretekstfarge("yellow", "blue");
+            }
+            else if (innhold.className == "partymodus2"){
+                innhold.className = "partymodus3"
+                endretekstfarge("green", "purple");
+            }
+            else if (innhold.className == "partymodus3"){
+                innhold.className = "partymodus4"
+                endretekstfarge("orange", "teal");
+            }
+            else if (innhold.className == "partymodus4"){
+                innhold.className = "partymodus5"
+                endretekstfarge("pink", "black");
+            }
+            else if (innhold.className == "partymodus5"){
+                innhold.className = "partymodus6"
+                endretekstfarge("gold", "maroon");
+            }
+            else if (innhold.className == "partymodus6"){
+                innhold.className = "partymodus7"
+                endretekstfarge("cyan", "navy");
+            }
+            else if (innhold.className == "partymodus7"){
+                innhold.className = "partymodus8"
+                endretekstfarge("violet", "lime");
+            }
+            else if (innhold.className == "partymodus8"){
+                innhold.className = "partymodus9"
+                endretekstfarge("silver", "brown");
+            }
+            else if (innhold.className == "partymodus9"){
+                innhold.className = "partymodus10"
+                endretekstfarge("black", "white");
+            }
+
+            else{
+                innhold.className = "startmodus"
+                endretekstfarge("black", "black");
+            }
+
+        }
+        function endretekstfarge(h1farge, h2farge) {
+            const h1 = document.querySelector("h1");
+            const h2 = document.querySelector("h2");
+            if (h1) h1.style.color = h1farge;
+            if (h2) h2.style.color = h2farge;
+        }
+
+        function dndjokes(){
+            let tilfeldigvits = vitser[Math.floor(Math.random() * vitser.length)];
+
+            tekst.textContent = tilfeldigvits;
+        }
+    </script>
+
+
+    <style>
+
+        .innhold{
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        button{
+            margin-top:5px;
+        }
+
+        a{
+            background-color: aliceblue;
+            border:1px solid;
+            color:black;
+            margin-top:5px;
+        }
+        
+        .startmodus{
+            background-color: pink;
+        }
+
+        .partymodus1{
+            background-color:rebeccapurple;
+        }
+
+        .partymodus2{
+            background-color:aqua;
+        }
+
+        .partymodus3{
+            background-color:yellow;
+        }
+
+        .partymodus4{
+            background-color:yellowgreen;
+        }
+
+        .partymodus5{
+            background-color:chartreuse;
+        }
+
+        .partymodus6 {
+            background-color: orange;
+        }
+
+        .partymodus7 {
+            background-color: violet;
+        }
+
+        .partymodus8 {
+            background-color: crimson;
+        }
+
+        .partymodus9 {
+            background-color: turquoise;
+        }
+
+        .partymodus10 {
+            background-color: lightgreen;
+        }
+
+
+    </style>
+</body>
+</html>
